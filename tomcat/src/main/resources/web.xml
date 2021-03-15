@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<web-app>
+
+    <filter>
+        <filter-name>NoteFilter</filter-name>
+        <filter-class>com.lintianqiao.tomcat.filter.NoteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>NoteFilter</filter-name>
+        <url-pattern>/url</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>NoteServlet</servlet-name>
+        <servlet-class>com.lintianqiao.tomcat.servlet.NoteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NoteServlet</servlet-name>
+        <url-pattern>/note</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NoteServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <security-constraint></security-constraint>
+</web-app>

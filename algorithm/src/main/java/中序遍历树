@@ -1,0 +1,48 @@
+Node node{
+Node left;
+Node right;
+int value;
+}
+
+void inOrder(Node root) {
+
+    Node left = root.left;
+    NOde right = root.right;
+    if(left!=null){
+        inOrder(left);
+    }
+    print(root);
+    if(right)
+    inOrder(right);
+}
+
+void inOrder2(Node root){
+    if(root==null)
+        return;
+
+    Node temp_right = root.right;
+    Node current=root;
+    List<Node> path;
+    path.add(root);
+    while(path.length>0){
+        Node last = path[path.length-1];
+        Node temp_left=last.left;
+        if(temp_left!=null){
+            path.add(temp_left);
+            continue;
+        }
+        print(last);
+        path.remove(path.length-1);
+        if(last.right!=null){
+            path.add(last.right);
+            continue;
+        }
+        Node parent=path[path.length-1];
+        print(parent);
+        path.remove(path.length-1);
+        if(parent.right!=null){
+            path.add(parent.right);
+        }
+
+    }
+}

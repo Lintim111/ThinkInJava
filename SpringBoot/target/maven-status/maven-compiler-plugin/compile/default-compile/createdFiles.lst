@@ -1,0 +1,3 @@
+com/lintim/springboot/Main.class
+com/lintim/springboot/configuration/BeanConfiguration.class
+com/lintim/springboot/beans/HelloBean.class
