@@ -20,4 +20,13 @@ public class HelloWorldClientHandler extends ChannelInboundHandlerAdapter {
         cause.printStackTrace();
         ctx.close();
     }
+
+    @Override
+    public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("HelloWorldClientHandler added, do some init things(init related handlers, like initChannel in ChannelInitializer)");
+    }
+    @Override
+    public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
+        System.out.println("HelloWorldClientHandler removed, do some clean things");
+    }
 }
